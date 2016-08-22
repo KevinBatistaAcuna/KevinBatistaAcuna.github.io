@@ -1,0 +1,427 @@
+$banner-width: 1000px;
+$banner-height: 250px;
+
+@import "../../../styles/main";
+
+// Custom styles for this banner
+
+.wrapper{
+  background: #4282E9;
+}
+.nube{
+  width: 35%;
+  position: absolute;
+  z-index: 1;
+
+  img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: 500px;
+  }
+}
+
+.nube1{
+  width: 35%;
+  position: absolute;
+  z-index: 1;
+
+  img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 100px;
+  }
+}
+
+.avion{
+  left: -550px;
+  z-index: 2;
+
+  p{
+    display: inline-block;
+    left: -30px;
+    top: -1000px;
+    letter-spacing: 15px;
+    font-size: 50px;
+  }
+}
+
+.letter{
+    font-family: cursive;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    /* Standard syntax */
+    animation-name: letter;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes letter {
+    0% {top:-80px;}
+    25% {top: -50px;}
+    50% {top:-80px;}
+    75% {top: -50px;}
+    100% {top:-80px;}
+}
+
+/* Standard syntax */
+@keyframes letter {
+    0%   {top:-80px;}
+    25% {top: -50px;}
+    50%  {top:-80px;}
+    75% {top: -50px;}
+    100% {top:-80px;}
+}
+
+.e {
+    animation-delay: 0.3s;
+}
+
+.v {
+    animation-delay: 0.6s;
+}
+
+.i {
+    animation-delay: 0.9s;
+}
+
+.n {
+    animation-delay: 1.2s;
+  }
+
+.lenguages{
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+
+  p{
+  text-align: center;
+  color: white;
+  top: 70%;
+  width: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-family: cursive;
+  font-weight: bold;
+  background: url("../images/madera.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
+
+.html{
+  position: absolute;
+  z-index: 3;
+  width: 20%;
+  height: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100px;
+
+
+  img{
+    position: relative;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.js{
+  position: absolute;
+  z-index: 3;
+  width: 20%;
+  height: 80%;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+
+
+  img{
+    position: relative;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.css{
+  position: absolute;
+  z-index: 3;
+  width: 20%;
+  height: 80%;
+  top: 50%;
+  bottom: 0;
+  left: 700px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  float: right;
+
+
+  img{
+    position: relative;
+    width: 105%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.jquery{
+  position: absolute;
+  z-index: 3;
+  width: 20%;
+  height: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100px;
+
+
+  img{
+    position: relative;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.angular{
+  position: absolute;
+  z-index: 3;
+  width: 20%;
+  height: 80%;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+
+
+  img{
+    position: relative;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.greensock{
+  position: absolute;
+  z-index: 3;
+  width: 20%;
+  height: 80%;
+  top: 50%;
+  bottom: 0;
+  left: 700px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  float: right;
+
+
+  img{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.gulp{
+  position: absolute;
+  z-index: 3;
+  width: 20%;
+  height: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100px;
+
+
+  img{
+    position: relative;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.git{
+  position: absolute;
+  z-index: 3;
+  width: 20%;
+  height: 80%;
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+
+
+  img{
+    position: relative;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.grunt{
+  position: absolute;
+  z-index: 3;
+  width: 20%;
+  height: 80%;
+  top: 50%;
+  bottom: 0;
+  left: 700px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  float: right;
+
+
+  img{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.title_contact{
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+
+  p{
+  text-align: center;
+  color: white;
+  top: 70%;
+  width: 30%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-family: cursive;
+  font-weight: bold;
+  background: url("../images/madera.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
+
+.contact{
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  transform: translateY(-50%);
+  left: 8%;
+  transform: translateX(-50%);
+  z-index: 3;
+
+  p{
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .left, .right{
+    height: 90%;
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .left{
+    left: 3%;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .right{
+    left: 52%;
+
+    a{
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 25px;
+    }
+
+    .face {
+      width: 85px;
+      height: 85px;
+      position: absolute;
+      top: 60px;
+      left: 15px;
+
+      img {
+        width: 87px;
+      }
+    }
+
+    .link{
+      width: 110px;
+      height: 35px;
+      position: absolute;
+      top: 85px;
+      left: 131px;
+
+      img{
+        width: 110px;
+      }
+    }
+
+    .gith{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 60px;
+      left: 250px;
+
+      img{
+        width: 110px;
+      }
+    }
+  }
+}
+
+

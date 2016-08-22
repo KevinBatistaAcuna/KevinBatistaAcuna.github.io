@@ -1,0 +1,274 @@
+$banner-width: 100%;
+$banner-height: 100%;
+body {
+	overflow: hidden;
+}
+
+#main {
+	font-family: Courier New;
+	filter: blur(50px);
+
+	.mouse{
+		position: absolute;
+		z-index: 2;
+		width: 100%;
+		text-align: center;
+	}
+
+
+	#header{
+		width: 100%;
+		position: absolute;
+		top:0;
+		left:0;
+	    background: url("../images/cr.jpg");
+	    background-size: cover;
+	    height: 100%;
+	    z-index: 1;
+	
+
+		.right, .left{
+			position: absolute;
+			color:#000;
+			z-index: 2;
+		}
+
+		.left{
+			top:40%;
+			left:-256px;
+			width: 300px;
+			height: 300px;
+			background-color: #FFF;
+			transform: rotate(45deg) translateY(-50%);
+
+			h2 {
+				margin:0 auto;
+				text-align: center;
+				cursor: pointer;
+				width: 50%;
+			}
+
+			h2:nth-child(2){
+				transform: rotate(-90deg);
+				position: relative;
+				left: 45%;
+				top: 35%;
+			}
+
+			.home-right{
+				top: 70%;
+				position: absolute;
+				transform: rotate(-45deg);
+			}
+		}
+
+		.right {
+			top:40%;
+			right:-44px;
+			width: 300px;
+			height: 300px;
+			background-color: #FFF;
+			transform: rotate(45deg) translateY(-50%);
+		
+			h2 {
+				margin:0 auto;
+				position: absolute;
+				transform: rotate(270deg);
+				left: -20%;
+				top: 45%;
+				cursor: pointer;
+				width: 53%;
+			}
+
+			h2:nth-child(2){
+				transform: rotate(0deg);
+				left: 23%;
+				top: 90%;
+				width: 63%;
+			}
+
+			.home-left{
+				left: 58%;
+				top: 10%;
+				transform: rotate(-45deg)
+			}
+		}
+	}
+
+	#myPic{
+		top: 50%;
+		left: 38.5%;
+		transform: translateY(-50%);
+		position: absolute;
+		width: 25%;
+		height: auto;
+		z-index: 2;
+	
+		.picbyn, .picYellow, .picblue, .picred, .picgreen{
+			width: 100%;
+			height: auto;
+		}
+
+		.picyellow, .picblue, .picred, .picgreen{
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			width: 100%;
+		}
+
+		.history {
+			opacity: 0;
+			position: inherit;
+			top: -6px;
+			border: 5px solid #000;
+			background: #FFF;
+			text-align: center;
+			border-radius: 20px;
+			width: 100%;
+			height: 100%;
+			font-size: 15px;
+			
+			h2{
+				margin-top: 0;
+			}
+		}
+
+		.follow {
+			opacity: 0;
+			position: inherit;
+			top: -6px;
+			border: 5px solid #000;
+			background: #FFF;
+			text-align: center;
+			border-radius: 20px;
+			width: 100%;
+			height: 100%;
+			font-size: 15px;
+
+			.face{
+				width: 20%;
+				position: absolute;
+				left: 20%;
+				top: 20%;
+			}
+
+			.linkedin {
+				width: 30.5%;
+				position: absolute;
+				right: 20%;
+				top: 16%;
+			}
+
+			.github {
+				position: absolute;
+				left: 15%;
+				top: 40%;
+			}
+		}
+	}
+
+	#contact{
+	background: url("../images/internet.jpg");
+	background-size: cover;
+	width:100%;
+	height: 100%;
+	position: absolute;
+	right: -100%;
+	top: 0;
+	z-index: 1;
+
+		.form{
+			width: 28%;
+			height: 70%;
+			border: 1px solid #000;
+			border-radius: 3px;
+			position: absolute;
+			left: 21%;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #FFF;
+			border: 10px solid #000;
+
+			form{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				font-weight: bold;
+				
+				#title{
+					padding-bottom: 10%;
+				}
+
+				.input{
+					width: 100%;
+					height: 20%;
+					text-align: center;
+					margin-top: -5%;
+
+					input{
+						width: 80%;
+						height: 30%;
+						text-align: center;
+						border: 2px solid #000;
+					}
+				}
+				.textarea{
+					margin-top: -5%;
+
+					textarea{
+						border: 2px solid #000;
+						width: 80%;
+					}
+				}
+				.submit {
+					margin-top: 7%;
+
+					input {
+						border: 2px solid #000;
+						background: #FFF;
+						font-weight: bold;
+						width: 25%;
+						height: 30px;
+						cursor: pointer;
+						font-family: Courier New;
+						font-size: 16px;
+					}
+					input:hover {
+						background: #000;
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+
+	#aboutme {
+		width: 100%;
+		height: 100%;
+		background: url("../images/banda.jpg");
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		right: -100%;
+	}
+
+	#jobs {
+		width: 100%;
+		height: 100%;
+		background: url("../images/code.jpg");
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: -100%;
+	}
+
+	#blog{
+		width: 100%;
+		height: 100%;
+		background: url("../images/freelance.jpg");
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: -100%;
+	}
+}

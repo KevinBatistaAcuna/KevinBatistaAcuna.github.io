@@ -1,0 +1,289 @@
+$banner-width: 800px;
+$banner-height: 300px;
+
+@import "../../../styles/main";
+
+// Custom styles for this banner
+
+.wrapper {
+  background: #55E9EB;
+}
+.base{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 220px;
+}
+
+.name{
+  top:30%;
+  left: 25%;
+  width: 50%;
+  position: absolute;
+  z-index: 5;
+  -webkit-animation-name: iname;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  /* Standard syntax */
+  animation-name: iname;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  h2{
+  text-align: center;
+  color: white;
+  top: 40%;
+  width: 100%;
+  font-size: 30px;
+  font-family: cursive;
+  font-weight: bold;
+  background: url("../images/wood.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes iname {
+    0% {transform: rotate(20deg);}
+    25% {transform: rotate(-20deg);}
+    50% {transform: rotate(20deg);}
+    75% {transform: rotate(-20deg);}
+    100% {transform: rotate(20deg);}
+}
+
+/* Standard syntax */
+@keyframes iname {
+    0%   {transform: rotate(3deg);}
+    25% {transform: rotate(-3deg);}
+    50%  {transform: rotate(3deg);}
+    75% {transform: rotate(-3deg);}
+    100% {transform: rotate(3deg);}
+}
+
+.rope-left img{
+  top: -20px;
+  width: 100px;
+  height: 180px;
+  position: absolute;
+  left: 170px;
+  z-index: 4;
+  -webkit-animation-name: ropeleft;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  /* Standard syntax */
+  animation-name: ropeleft;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes ropeleft {
+    0% {top:-20px;}
+    25% {top:0px;}
+    50% {top:-20px;}
+    75% {top:0px;}
+    100% {top:-20px;}
+}
+
+/* Standard syntax */
+@keyframes ropeleft {
+    0%   {top:-30px;}
+    25% {top:-10px;}
+    50%  {top:-30px;}
+    75% {top:-10px;}
+    100% {top:-30px;}
+}
+
+.rope-right img{
+  top:-20px;
+  width: 100px;
+  height: 180px;
+  position: absolute;
+  left: 532px;
+  z-index: 4;
+  -webkit-animation-name: roperight;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  /* Standard syntax */
+  animation-name: roperight;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes roperight {
+    0%   {top:0px;}
+    25% {top:-20px;}
+    50%  {top:0px;}
+    75% {top:-20px;}
+    100% {top:0px;}
+}
+
+/* Standard syntax */
+@keyframes roperight {
+    0%   {top:-10px;}
+    25% {top:-30px;}
+    50%  {top:-10px;}
+    75% {top:-30px;}
+    100% {top:-10px;}
+}
+
+.html{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 80px;
+  top: 10px;
+}
+
+.css{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 250px;
+}
+
+.js{
+  height: 100px;
+  width: 80px;
+  position: absolute;
+  top: 10px;
+  left: 450px;
+}
+
+.gulp{
+  height: 60px;
+  width: 100px;
+  position: absolute;
+  top: 30px;
+  left: 600px;
+}
+
+.git{
+  height: 60px;
+  width: 100px;
+  position: absolute;
+  top: 150px;
+  left: 80px;
+}
+
+.grunt{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 130px;
+  left: 250px;
+}
+
+.jquery{
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: 120px;
+  left: 420px;
+}
+
+.greensock{
+  height: 100px;
+  width: 80px;
+  position: absolute;
+  top: 130px;
+  left: 610px;
+}
+
+.contact{
+  height: 200px;
+  width: 500px;
+  background: url("../images/wood.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  top: 50px;
+  left: 145px;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 10;
+
+  h2{
+    letter-spacing: 2px;
+    color: #fff;
+    left: 85px;
+    top: 10px;
+  }
+}
+
+.face{
+  height: 80px;
+  width: 80px;
+  left: 100px;
+  top: 75px;
+  position: absolute;
+
+  img {
+    width: 80px;
+  }
+}
+
+.link{
+  height: 40px;
+  width: 120px;
+  top: 91px;
+  left: 215px;
+  position: absolute;
+  img {
+    width: 120px;
+  }
+}
+
+.gith{
+  height: 70px;
+  width: 70px;
+  top: 81px;
+  left: 355px;
+  position: absolute;
+  img {
+    width: 95px;
+  }
+}
+
+.rope-left1 img{
+  top: -20px;
+  width: 100px;
+  height: 180px;
+  position: absolute;
+  left: 170px;
+  z-index: 4;
+}
+
+.rope-right1 img{
+  width: 100px;
+  height: 180px;
+  position: absolute;
+  left: 532px;
+  z-index: 4;
+}
+
+
+
+
+
+
+
+

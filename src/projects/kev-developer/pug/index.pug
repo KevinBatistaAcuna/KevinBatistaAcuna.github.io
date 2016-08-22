@@ -1,0 +1,63 @@
+extends ../../../pug/layout
+block metaSize
+	meta(name="ad.size", content='width=160,height=600')
+
+block content
+	#main
+		h2.mouse Put the mouse over the picture
+
+		#myPic
+			img(src="images/kevblancoynegro.jpg").picbyn
+			img(src="images/kevyellow.jpg").picyellow
+			img(src="images/kevred.jpg").picred
+			img(src="images/kevblue.jpg").picblue
+			img(src="images/kevgreen.jpg").picgreen
+			.history
+				h2 My History
+				p 
+					| Everything started when a good friend told me all about Web Development and what amazing he's living in 
+					| this career. So, I decided start learning the basics of Web Development in some online courses, when I 
+					| thought I was ready for a job, I get my first job being a PayPal developer. 
+					| I was developing payment buttons with HTML and CSS. 
+				p 
+					| With passage of a few months, I got a new job in The Hangar Interactive Agency as Content Developer, 
+					| working for an important Car Agency in different parts of world. After 4 months, the managers decided make me a 
+					| promotion to the Motion Team where I have 3 months of work as Motion Developer.
+				p 
+					| I effort day to day, to learn new technologies and web development languages.
+			.follow
+				h2 Follow me in
+				img(src="images/face.png").face
+				img(src="images/linked.png").linkedin
+				img(src="images/github.png").github
+		#contact
+			.form
+				form(action="MAILTO:kbatista23@gmail.com", method="post")
+					h2#title Contact Me
+					.input
+						p Name
+						input(name='name', type='text', class="name", placeholder='Kevin Batista')
+					.input
+						p Subject
+						input(name='subject', type='text', class="subject", placeholder='Hello')
+					.textarea
+						p Message
+						textarea(name="description", cols="40", rows="5", class="message")
+					.submit
+						input(type="submit", value="Send" id="submit")
+		#aboutme
+
+		#jobs
+
+		#blog
+
+		#header
+			.right
+				h2.about &lt;About Me/&gt;
+				h2.contact &lt;Contact Me/&gt;
+				h2.home-left &lt;Home/&gt;
+			
+			.left
+				h2.jobs &lt;My Jobs/&gt;
+				h2.blog &lt;My Blog/&gt;
+				h2.home-right &lt;Home/&gt;
