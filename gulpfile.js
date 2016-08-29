@@ -46,7 +46,7 @@ gulp.task('server', function() {
         port: 9000,
         reloadDelay: 1000,
         server: {
-            baseDir: DIST_PATH
+            baseDir: '.'
         }
     });
 });
@@ -154,7 +154,8 @@ gulp.task('clean', function() {
     console.log('>>>> STARTING DEL TASK ✂️  <<<<');
 
     return del.sync([
-        DIST_PATH
+        DIST_PATH,
+        'index.html'
     ]);
 });
 
@@ -178,7 +179,7 @@ gulp.task('clean', function() {
 gulp.task('processHtml', function() {
     return gulp.src('src/index.html')
         .pipe(processhtml({data:{bannerList: generateIndex()}}))
-        .pipe(gulp.dest(DIST_PATH + '/'));
+        .pipe(gulp.dest('.'));
 });
 
 // Copy static folder for distribute
