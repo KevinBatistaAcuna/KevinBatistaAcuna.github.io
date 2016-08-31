@@ -4,7 +4,6 @@ var path = require('path');
 
 module.exports = function() {
     var h2 = '<h2 class="banner-client">' + pkg.title + '</h2>';
-    var h3 = '<h3 class="banner-name">' + pkg.client + '</h3>';
     var table = '<div class="table-responsive"><table class="table"><tbody>';
     var tr = '<tr><td class="b-top">';
     var ENDtr = '</td></tr>';
@@ -35,7 +34,7 @@ module.exports = function() {
 
         table += '</tbody></table></div>';
 
-        html = h2 + h3 + table;
+        html = h2 + table;
 
         return html;
 
