@@ -25,7 +25,7 @@ module.exports = function() {
 
         table += tr;
 
-        links += '<a class="pull-left banner-size" href="dist/' + FOLDER + '/index.html" target="_blank">' + folderName + '</a>';
+        links += '<a class="pull-left banner-size" href="dist/'+FOLDER+'/index.html" target="_blank">' + folderName + '</a>';
 
         table += links;
         table += ENDtr;

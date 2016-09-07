@@ -20,8 +20,6 @@ var gulpCopy = require('gulp-copy');
 // Pug Templates
 var pug = require('gulp-pug');
 
-
-
 // File paths
 var DIST_PATH = 'dist';
 var SRC_PATH = 'src/projects';
@@ -145,22 +143,6 @@ gulp.task('clean', function() {
         'index.html'
     ]);
 });
-
-// Zip banners per folder 
-// gulp.task('zips', function() {
-
-//     console.log('>>>> STARTING ZIPS TASK 🗜  <<<<');
-
-//     var zipTask = FOLDERS.map(function(FOLDERS) {
-
-//         return gulp.src(path.join(ZIP_PATH, FOLDERS))
-//             .pipe(zip(FOLDERS + '.zip'))
-//             .pipe(gulp.dest(ZIP_PATH + '/' + 'ZIPS'));
-
-//     });
-
-//     return (zipTask);
-// });
 
 // Generate dinamic index.html for banners
 gulp.task('processHtml', function() {
