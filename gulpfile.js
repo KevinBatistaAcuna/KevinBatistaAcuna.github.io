@@ -20,10 +20,7 @@ var gulpCopy = require('gulp-copy');
 // Pug Templates
 var pug = require('gulp-pug');
 
-// Image compression
-var imagemin = require('gulp-imagemin');
-var imageminPngquant = require('imagemin-pngquant');
-var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+
 
 // File paths
 var DIST_PATH = 'dist';
@@ -112,16 +109,6 @@ gulp.task('images', function() {
     var imgsTask = FOLDERS.map(function(FOLDERS) {
 
         return gulp.src(path.join(SRC_PATH, FOLDERS, '/img/*.{png,jpeg,jpg,svg,gif}'))
-            .pipe(imagemin(
-                [
-                    imagemin.gifsicle(),
-                    imagemin.jpegtran(),
-                    imagemin.optipng({
-                        optimizationLevel: 4,
-                    }),
-                    imagemin.svgo()
-                ]
-            ))
             .pipe(gulp.dest(DIST_PATH + '/' + FOLDERS + '/images'));
     });
 
