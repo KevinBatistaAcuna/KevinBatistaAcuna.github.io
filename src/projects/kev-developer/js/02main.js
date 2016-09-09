@@ -77,24 +77,24 @@ App_dream.fn.goToAndWait = function(stepNumber, seconds) {
 };
 
 
-App_dream.fn.step1 = function() {
+App_dream.fn.step1 = function(){
 
 // global variables
     var tl        = new TimelineMax(),
         header    = $("#header"),
         myPic     = $("#myPic"),
+        byw       = $("#byw"),
+        yellow    = $("#yellow"),
+        red       = $("#red"),
+        blue      = $("#blue"),
+        green     = $("#green"),
         pic       = $(".pic"),
-        history   = $(".history"),
+        text      = $(".text"),
         contactMe = $('.contact'),
         contact   = $('#contact'),
         mouse     = $('.mouse'),
         homeLeft  = $('.home-left'),
         homeRight = $('.home-right'),
-        picbyn    = $('.picbyn'),
-        picyellow = $('.picyellow'),
-        picred    = $('.picred'),
-        picblue   = $('.picblue'),
-        picgreen  = $('.picgreen'),
         follow    = $('.follow'),
         aboutme   = $('#aboutme'),
         about     = $('.about'),
@@ -110,25 +110,21 @@ window.tl = tl;
     tl.addLabel('intro')
       .to(main, 3, {css:{'-webkit-filter' : 'blur(1px)'}}, 'intro');
 
-    // function totalTimePrint() {
-    //   console.log(tl.totalTime());
-    // }
-
 // cta arrow
 
   myPic.on('mouseover', function(){
     var tl2 = new TimelineMax();      
     tl2
       .addLabel('rotate')
-      .to(picbyn, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
-      .to(history, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
+      .to(pic, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
+      .to(text, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
   });
   myPic.on('mouseleave', function(){
     var tl3 = new TimelineMax();      
     tl3
       .addLabel('rotate')
-      .to(history, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
-      .to(picbyn, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
+      .to(text, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
+      .to(pic, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
   });
 
   contactMe.on('click', function(){
@@ -140,57 +136,24 @@ window.tl = tl;
       .to(myPic, 5, {x: '+100%', ease: SlowMo.easeInOut}, 'move')
       .to(mouse, 5, {x: '+25%', ease: SlowMo.easeInOut, color: '#FFF'}, 'move')
       .to(main, 7, {css:{'-webkit-filter' : 'blur(0px)', ease: SlowMo.easeInOut}}, 'move')
-      .to(picbyn, 5, {opacity: 0, ease: SlowMo.easeInOut}, 'move')
-      .to(picyellow, 2, {opacity: 1, ease: SlowMo.easeInOut}, 'move+=1');
+      .to(byw, 5, {opacity: 0, ease: SlowMo.easeInOut}, 'move')
+      .to(yellow, 2, {opacity: 1, ease: SlowMo.easeInOut}, 'move+=1');
 
-      myPic.on('mouseover', function(){
-        var tl5 = new TimelineMax();      
-        tl5
-          .addLabel('rotate')
-          .to(picyellow, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
-          .to(follow, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
-      });
-      myPic.on('mouseleave', function(){
-        var tl6 = new TimelineMax();      
-          tl6
-            .addLabel('rotate')
-            .to(follow, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
-            .to(picyellow, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
-        });
-
-      homeLeft.on('click', function(){
-    var tl7 = new TimelineMax();      
-    tl7
-      .addLabel('move')
-      .to(header, 5, {x: '+0%', ease: SlowMo.easeInOut}, 'move')
-      .to(contact, 5, {x: '+0%', ease: SlowMo.easeInOut}, 'move')
-      .to(myPic, 5, {x: '-0%', ease: SlowMo.easeInOut}, 'move')
-      .to(mouse, 5, {x: '-0%', ease: SlowMo.easeInOut, color: '#000'}, 'move')
-      .to(main, 6, {css:{'-webkit-filter' : 'blur(1px)', ease: SlowMo.easeInOut}}, 'move')
-      .to(picbyn, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
-      .to(picyellow, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
-
-      myPic.on('mouseover', function(){
-        var tl8 = new TimelineMax();      
-          tl8
-            .addLabel('rotate')
-            .to(picbyn, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
-            .to(history, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
-            .set(follow, {opacity: 0})
-        });
-      myPic.on('mouseleave', function(){
-        var tl9 = new TimelineMax();      
-          tl9
-            .addLabel('rotate')
-            .to(history, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
-            .to(picbyn, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
-            .set(picyellow, {opacity: 0})
-        });
-  });
+    homeLeft.on('click', function(){
+      var tl7 = new TimelineMax();      
+      tl7
+        .addLabel('move')
+        .to(header, 5, {x: '+0%', ease: SlowMo.easeInOut}, 'move')
+        .to(contact, 5, {x: '+0%', ease: SlowMo.easeInOut}, 'move')
+        .to(myPic, 5, {x: '-0%', ease: SlowMo.easeInOut}, 'move')
+        .to(mouse, 5, {x: '-0%', ease: SlowMo.easeInOut, color: '#000'}, 'move')
+        .to(main, 6, {css:{'-webkit-filter' : 'blur(1px)', ease: SlowMo.easeInOut}}, 'move')
+        .to(byw, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
+        .to(yellow, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
     });
-  
+  });
 
-about.on('click', function(){
+  about.on('click', function(){
     var tl4 = new TimelineMax();      
     tl4
       .addLabel('move')
@@ -199,56 +162,24 @@ about.on('click', function(){
       .to(myPic, 5, {x: '+100%', ease: SlowMo.easeInOut}, 'move')
       .to(mouse, 5, {x: '+25%', ease: SlowMo.easeInOut, color: '#FFF'}, 'move')
       .to(main, 7, {css:{'-webkit-filter' : 'blur(0px)', ease: SlowMo.easeInOut}}, 'move')
-      .to(picbyn, 5, {opacity: 0, ease: SlowMo.easeInOut}, 'move')
-      .to(picgreen, 2, {opacity: 1, ease: SlowMo.easeInOut}, 'move+=1');
+      .to(byw, 5, {opacity: 0, ease: SlowMo.easeInOut}, 'move')
+      .to(green, 2, {opacity: 1, ease: SlowMo.easeInOut}, 'move+=1');
 
-      myPic.on('mouseover', function(){
-        var tl5 = new TimelineMax();      
-        tl5
-          .addLabel('rotate')
-          .to(picgreen, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
-          .to(follow, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
-      });
-      myPic.on('mouseleave', function(){
-        var tl6 = new TimelineMax();      
-          tl6
-            .addLabel('rotate')
-            .to(follow, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
-            .to(picgreen, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
-        });
-
-      homeLeft.on('click', function(){
-        var tl7 = new TimelineMax();      
-        tl7
-          .addLabel('move')
-          .to(header, 5, {x: '+0%', ease: SlowMo.easeInOut}, 'move')
-          .to(aboutme, 5, {x: '+0%', ease: SlowMo.easeInOut}, 'move')
-          .to(myPic, 5, {x: '-0%', ease: SlowMo.easeInOut}, 'move')
-          .to(mouse, 5, {x: '-0%', ease: SlowMo.easeInOut, color: '#000'}, 'move')
-          .to(main, 6, {css:{'-webkit-filter' : 'blur(1px)', ease: SlowMo.easeInOut}}, 'move')
-          .to(picbyn, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
-          .to(picgreen, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
-
-          myPic.on('mouseover', function(){
-            var tl8 = new TimelineMax();      
-              tl8
-                .addLabel('rotate')
-                .to(picbyn, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
-                .to(history, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
-                .set(follow, {opacity: 0})
-            });
-          myPic.on('mouseleave', function(){
-            var tl9 = new TimelineMax();      
-              tl9
-                .addLabel('rotate')
-                .to(history, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
-                .to(picbyn, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
-                .set(picgreen, {opacity: 0})
-            });
-      });
+    homeLeft.on('click', function(){
+      var tl7 = new TimelineMax();      
+      tl7
+        .addLabel('move')
+        .to(header, 5, {x: '+0%', ease: SlowMo.easeInOut}, 'move')
+        .to(aboutme, 5, {x: '+0%', ease: SlowMo.easeInOut}, 'move')
+        .to(myPic, 5, {x: '-0%', ease: SlowMo.easeInOut}, 'move')
+        .to(mouse, 5, {x: '-0%', ease: SlowMo.easeInOut, color: '#000'}, 'move')
+        .to(main, 6, {css:{'-webkit-filter' : 'blur(1px)', ease: SlowMo.easeInOut}}, 'move')
+        .to(byw, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
+        .to(green, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
     });
+  });  
 
-jobs.on('click', function(){
+  jobs.on('click', function(){
     var tl4 = new TimelineMax();      
     tl4
       .addLabel('move')
@@ -257,56 +188,24 @@ jobs.on('click', function(){
       .to(myPic, 5, {x: '-100%', ease: SlowMo.easeInOut}, 'move')
       .to(mouse, 5, {x: '-25%', ease: SlowMo.easeInOut, color: '#FFF'}, 'move')
       .to(main, 7, {css:{'-webkit-filter' : 'blur(0px)', ease: SlowMo.easeInOut}}, 'move')
-      .to(picbyn, 5, {opacity: 0, ease: SlowMo.easeInOut}, 'move')
-      .to(picred, 2, {opacity: 1, ease: SlowMo.easeInOut}, 'move+=1');
+      .to(byw, 5, {opacity: 0, ease: SlowMo.easeInOut}, 'move')
+      .to(red, 2, {opacity: 1, ease: SlowMo.easeInOut}, 'move+=1');
 
-      myPic.on('mouseover', function(){
-        var tl5 = new TimelineMax();      
-        tl5
-          .addLabel('rotate')
-          .to(picred, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
-          .to(follow, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
-      });
-      myPic.on('mouseleave', function(){
-        var tl6 = new TimelineMax();      
-          tl6
-            .addLabel('rotate')
-            .to(follow, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
-            .to(picred, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
-        });
-
-      homeRight.on('click', function(){
-        var tl7 = new TimelineMax();      
-        tl7
-          .addLabel('move')
-          .to(header, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
-          .to(myjobs, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
-          .to(myPic, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
-          .to(mouse, 5, {x: '0%', ease: SlowMo.easeInOut, color: '#000'}, 'move')
-          .to(main, 6, {css:{'-webkit-filter' : 'blur(1px)', ease: SlowMo.easeInOut}}, 'move')
-          .to(picbyn, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
-          .to(picred, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
-
-          myPic.on('mouseover', function(){
-            var tl8 = new TimelineMax();      
-              tl8
-                .addLabel('rotate')
-                .to(picbyn, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
-                .to(history, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
-                .set(follow, {opacity: 0})
-            });
-          myPic.on('mouseleave', function(){
-            var tl9 = new TimelineMax();      
-              tl9
-                .addLabel('rotate')
-                .to(history, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
-                .to(picbyn, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
-                .set(picred, {opacity: 0})
-            });
-      });
+    homeRight.on('click', function(){
+      var tl7 = new TimelineMax();      
+      tl7
+        .addLabel('move')
+        .to(header, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
+        .to(myjobs, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
+        .to(myPic, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
+        .to(mouse, 5, {x: '0%', ease: SlowMo.easeInOut, color: '#000'}, 'move')
+        .to(main, 6, {css:{'-webkit-filter' : 'blur(1px)', ease: SlowMo.easeInOut}}, 'move')
+        .to(picbyn, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
+        .to(picred, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
     });
+  });
 
-blog.on('click', function(){
+  blog.on('click', function(){
     var tl4 = new TimelineMax();      
     tl4
       .addLabel('move')
@@ -315,54 +214,21 @@ blog.on('click', function(){
       .to(myPic, 5, {x: '-100%', ease: SlowMo.easeInOut}, 'move')
       .to(mouse, 5, {x: '-25%', ease: SlowMo.easeInOut, color: '#FFF'}, 'move')
       .to(main, 7, {css:{'-webkit-filter' : 'blur(0px)', ease: SlowMo.easeInOut}}, 'move')
-      .to(picbyn, 5, {opacity: 0, ease: SlowMo.easeInOut}, 'move')
-      .to(picblue, 2, {opacity: 1, ease: SlowMo.easeInOut}, 'move+=1');
+      .to(byw, 5, {opacity: 0, ease: SlowMo.easeInOut}, 'move')
+      .to(blue, 2, {opacity: 1, ease: SlowMo.easeInOut}, 'move+=1');
 
-      myPic.on('mouseover', function(){
-        var tl5 = new TimelineMax();      
-        tl5
-          .addLabel('rotate')
-          .to(picblue, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
-          .to(follow, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
-      });
-      myPic.on('mouseleave', function(){
-        var tl6 = new TimelineMax();      
-          tl6
-            .addLabel('rotate')
-            .to(follow, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
-            .to(picblue, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
-        });
-
-      homeRight.on('click', function(){
-        var tl7 = new TimelineMax();      
-        tl7
-          .addLabel('move')
-          .to(header, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
-          .to(myblog, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
-          .to(myPic, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
-          .to(mouse, 5, {x: '0%', ease: SlowMo.easeInOut, color: '#000'}, 'move')
-          .to(main, 6, {css:{'-webkit-filter' : 'blur(1px)', ease: SlowMo.easeInOut}}, 'move')
-          .to(picbyn, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
-          .to(picblue, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
-
-          myPic.on('mouseover', function(){
-            var tl8 = new TimelineMax();      
-              tl8
-                .addLabel('rotate')
-                .to(picbyn, 1, {rotationY: 1800, opacity: 0, ease:Power4.easeIn}, 'rotate')
-                .to(history, 1, {rotationY: 1800, opacity: 1, ease:Power4.easeIn}, 'rotate')
-                .set(follow, {opacity: 0})
-            });
-          myPic.on('mouseleave', function(){
-            var tl9 = new TimelineMax();      
-              tl9
-                .addLabel('rotate')
-                .to(history, 1, {rotationY: 0, opacity: 0, ease:Power4.easeIn}, 'rotate')
-                .to(picbyn, 1, {rotationY: 0, opacity: 1, ease:Power4.easeIn}, 'rotate')
-                .set(picblue, {opacity: 0})
-            });
-      });
+    homeRight.on('click', function(){
+      var tl7 = new TimelineMax();      
+      tl7
+        .addLabel('move')
+        .to(header, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
+        .to(myblog, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
+        .to(myPic, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
+        .to(mouse, 5, {x: '0%', ease: SlowMo.easeInOut, color: '#000'}, 'move')
+        .to(main, 6, {css:{'-webkit-filter' : 'blur(1px)', ease: SlowMo.easeInOut}}, 'move')
+        .to(byw, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
+        .to(blue, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
     });
-
-
+  }); 
+    
 };
