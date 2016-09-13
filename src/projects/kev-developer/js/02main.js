@@ -200,8 +200,8 @@ window.tl = tl;
         .to(myPic, 5, {x: '0%', ease: SlowMo.easeInOut}, 'move')
         .to(mouse, 5, {x: '0%', ease: SlowMo.easeInOut, color: '#000'}, 'move')
         .to(main, 6, {css:{'-webkit-filter' : 'blur(1px)', ease: SlowMo.easeInOut}}, 'move')
-        .to(picbyn, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
-        .to(picred, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
+        .to(byw, 5, {opacity: 1, ease: SlowMo.easeInOut}, 'move')
+        .to(red, 2, {opacity: 0, ease: SlowMo.easeInOut}, 'move');
     });
   });
 
